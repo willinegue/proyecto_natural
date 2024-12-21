@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Mis Actividades</h2>
+<a href="{{ url_for('register_activity') }}" class="btn btn-success mb-3">Añadir Actividad</a>
+<!-- Mostrar las actividades registradas -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tipo de Actividad</th>
+            <th>Cantidad</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for activity in activities %}
+        <tr>
+            <td>Plástico Reciclado</td>
+            <td>{{ activity.plastic_recycled }}</td>
+            <td>{{ activity.date.strftime('%d-%m-%Y') }}</td>
+            <td>
+                <form action="{{ url_for('delete_activity', activity_id=activity.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>                
+            </td>
+        </tr>
+        <tr>
+            <td>Distancia Caminando</td>
+            <td>{{ activity.distance_walked }}</td>
+            <td>{{ activity.date.strftime('%d-%m-%Y') }}</td>
+            <td>
+                <form action="{{ url_for('delete_activity', activity_id=activity.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Distancia en Bicicleta</td>
+            <td>{{ activity.distance_biked }}</td>
+            <td>{{ activity.date.strftime('%d-%m-%Y') }}</td>
+            <td>
+                <form action="{{ url_for('delete_activity', activity_id=activity.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Impacto Total</h3>
+<!-- Mostrar el impacto total -->
+<ul>
+    <li><strong>Plástico Reciclado Total:</strong> {{ total_plastic_recycled }} kg</li>
+    <li><strong>Distancia Caminando Total:</strong> {{ total_distance_walked }} km</li>
+    <li><strong>Distancia en Bicicleta Total:</strong> {{ total_distance_biked }} km</li>
+    <li><strong>CO₂ Ahorrado Total:</strong> {{ total_co2_saved }} kg</li>
+</ul>
+
+<h3>Educación y Consejos</h3>
+<!-- Mostrar el mensaje personalizado sobre el ahorro de CO₂ -->
+<p>{{ co2_message }}</p>
+
+<!-- Mostrar consejos para mejorar el impacto -->
+<ul>
+    {% for tip in tips %}
+    <li>{{ tip }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

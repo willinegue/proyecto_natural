@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Impacto Ambiental Total</h2>
+
+  <p><strong>Total de plástico reciclado:</strong> {{ total_plastic_recycled }} kg</p>
+  <p><strong>Total de distancia caminada:</strong> {{ total_distance_walked }} km</p>
+  <p><strong>Total de distancia recorrida en bicicleta:</strong> {{ total_distance_biked }} km</p>
+  <p><strong>Total CO₂ ahorrado:</strong> {{ total_co2_saved }} kg</p>
+
+  <!-- Opcional: Puedes agregar un gráfico visual -->
+  <img src="data:image/png;base64,{{ img_data }}" alt="Gráfico de impacto" />
+{% endblock %}

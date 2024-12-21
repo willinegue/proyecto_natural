@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Añadir Nueva Actividad</h2>
+  <form method="POST" action="{{ url_for('register_activity') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+      <label for="plastic_recycled">Cantidad de plástico reciclado (kg):</label>
+      {{ form.plastic_recycled(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+      <label for="distance_walked">Distancia recorrida caminando (km):</label>
+      {{ form.distance_walked(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+      <label for="distance_biked">Distancia recorrida en bicicleta (km):</label>
+      {{ form.distance_biked(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+{% endblock %}

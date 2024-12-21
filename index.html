@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Bienvenido a Recicla Fácil{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">¡Bienvenido a Recicla Fácil!</h1>
+    <p class="lead">Recicla de manera fácil y lleva un registro del impacto ambiental que generas.</p>
+    <hr class="my-4">
+    <p>Únete a nosotros y empieza a hacer la diferencia.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Regístrate</a>
+</div>
+{% endblock %}
