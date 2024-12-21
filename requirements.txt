@@ -1,0 +1,45 @@
+Aquí tienes una lista de todas las bibliotecas que se utilizarán en el proyecto Recicla Fácil :
+
+1. flask
+Framework web ligero para construir la aplicación.
+Instalación:pip install flask
+
+2. Frasco-SQLAlchemy
+Para manejar la base de datos en Flask.
+Instalación:pip install flask_sqlalchemy
+
+3. Flask-WTF
+Para manejar formularios y validaciones en Flask.
+Instalación:pip install flask_wtf
+
+4. matplotlib
+Utilizado para crear gráficos y visualizaciones del impacto ambiental
+Instalación:pip install matplotlib
+
+5. chart.js (opcional)
+Para gráficos de datos con interactividad en el frontend.
+Instalación:npm install chart.js
+
+6. API de Google Maps
+Para integrar el mapa de reciclaje.
+Dependiendo del uso específico, será necesario configurar las credenciales de API.
+
+7. solicitudes
+Utilizado para hacer solicitudes a API externas, por ejemplo, obtener datos climáticos o mapas en tiempo real.
+Instalación:pip install requests
+
+8. geopy
+Para geolocalización y manejo de coordenadas para los puntos de reciclaje.
+Instalación:pip install geopy
+
+9. SQLAlchemy
+Para manejar consultas en la base de datos en combinación con Flask-SQLAlchemy.
+Instalación:pip install sqlalchemy
+
+10. Formularios WT
+Extensión para formularios en Flask-WTF, utilizada para la creación de formularios personalizados.
+Instalación:pip install wtforms
+
+11. Frasco-Bootstrap
+Para facilitar el diseño responsivo mediante Bootstrap.
+Instalación:pip install flask-bootstrap
