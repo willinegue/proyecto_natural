@@ -1,5 +1,7 @@
 Aquí tienes una lista de todas las bibliotecas que se utilizarán en el proyecto Recicla Fácil :
 
+crear un entorno virtual con: pipenv shell
+
 1. flask
 Framework web ligero para construir la aplicación.
 Instalación:pip install flask
