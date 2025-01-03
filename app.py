@@ -121,6 +121,10 @@ def register_activity():
 def home():
     return render_template('index.html')
 
+@app.route("/sugerencias")
+def sugerencias():
+    return render_template("sugerencias.html")
+
 # Ruta de perfil (muestra las actividades del usuario)
 @app.route('/profile')
 @login_required
